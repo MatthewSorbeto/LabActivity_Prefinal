@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consonant Or Vowel</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <h2>Vowel or Consonant Checker</h2>
+
+    <label>Enter a letter:</label>
+    <input type="text" id="letterInput" maxlength="1">
+    <button onclick="checkLetter()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkLetter() {
+            let letter = document.getElementById("letterInput").value;
+
+            if (letter === "") {
+                document.getElementById("result").innerHTML = "Please enter a letter.";
+                return;
+            }
+
+            // Convert to lowercase for easy checking
+            letter = letter.toLowerCase();
+
+            // Check if it's a vowel
+            if ("aeiou".includes(letter)) {
+                document.getElementById("result").innerHTML = letter + " is a VOWEL";
+            }
+            // Check if it's a letter from a–z
+            else if (letter >= 'a' && letter <= 'z') {
+                document.getElementById("result").innerHTML = letter + " is a CONSONANT";
+            }
+            else {
+                document.getElementById("result").innerHTML = "That is not a letter.";
+            }
+        }
+    </script>
+
+</body>
+</html>
