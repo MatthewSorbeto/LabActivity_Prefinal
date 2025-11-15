@@ -3,7 +3,9 @@
 <head>
     <title>Philippine Place Identifier</title>
     <style>
-        
+        h2 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +29,6 @@
 
             let message = "";
 
-            // Sample list of known places
             if (place === "manila") {
                 message = "Manila: The capital city of the Philippines.";
             } 
@@ -41,10 +42,13 @@
                 message = "Baguio: Known as the Summer Capital of the Philippines.";
             }
             else if (place === "palawan") {
-                message = "Palawan: Famous for its stunning beaches and the Underground River.";
+                message = "Palawan: Famous for its beautiful beaches and the Underground River.";
+            }
+            else if (place === "bataan") {
+                message = "Bataan: Known for its role in World War II and the historic Bataan Death March.";
             }
             else {
-                message = "Place not found in the list. Try Manila, Cebu, Davao, Baguio, or Palawan.";
+                message = "Place not found in the list. Try Manila, Cebu, Davao, Baguio, Palawan, or Bataan.";
             }
 
             document.getElementById("result").innerHTML = message;
