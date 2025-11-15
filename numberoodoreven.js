@@ -7,8 +7,3 @@ function checkOddEven(number) {
     }
 }
 
-// Example usage:
-let num = prompt("Enter a number:");
-num = Number(num);
-
-checkOddEven(num);
