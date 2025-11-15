@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Philippine Place Identifier</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <h2>Philippine Place Identifier</h2>
+
+    <label>Enter a place in the Philippines:</label>
+    <input type="text" id="placeInput">
+    <button onclick="identifyPlace()">Identify</button>
+
+    <p id="result"></p>
+
+    <script>
+        function identifyPlace() {
+            let place = document.getElementById("placeInput").value.trim().toLowerCase();
+
+            if (place === "") {
+                document.getElementById("result").innerHTML = "Please enter a place.";
+                return;
+            }
+
+            let message = "";
+
+            // Sample list of known places
+            if (place === "manila") {
+                message = "Manila: The capital city of the Philippines.";
+            } 
+            else if (place === "cebu") {
+                message = "Cebu: Known as the Queen City of the South.";
+            }
+            else if (place === "davao") {
+                message = "Davao: Home of Mount Apo, the highest mountain in the Philippines.";
+            }
+            else if (place === "baguio") {
+                message = "Baguio: Known as the Summer Capital of the Philippines.";
+            }
+            else if (place === "palawan") {
+                message = "Palawan: Famous for its stunning beaches and the Underground River.";
+            }
+            else {
+                message = "Place not found in the list. Try Manila, Cebu, Davao, Baguio, or Palawan.";
+            }
+
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+
+</body>
+</html>
